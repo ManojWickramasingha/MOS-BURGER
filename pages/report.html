@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>MOS BURGER</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assest/css/index.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Sidebar -->
+      <div class="one sidebar1">
+        <div class="sidebarmain">
+          <div class="item">
+            <img src="../assest/img/home.png" alt="home" />
+            <h3>Home</h3>
+          </div>
+
+          <div class="item">
+            <img src="../assest/img/order.png" alt="home" />
+            <h3>Order</h3>
+          </div>
+
+          <div class="item">
+            <img src="../assest/img/customerIcon.png" alt="home" />
+            <h3>User</h3>
+          </div>
+
+          <div class="item">
+            <img src="../assest/img/RportIcon.png" alt="home" />
+            <h3>Report</h3>
+          </div>
+
+          <div class="item">
+            <img src="../assest/img/item.png" alt="home" />
+            <h3>Item</h3>
+          </div>
+        </div>
+      </div>
+      <!-- side bar -->
+
+      <!-- Head -->
+      <div class="four head1">
+        <div class="header">
+          <div class="name">
+            <h1>MOS BURGER</h1>
+            <button id="menubarbtn">
+              <img src="../assest/img/menubar.png" alt="" />
+            </button>
+            <div class="menubox" id="menubar">
+              <li><a href="">Home</a></li>
+              <li><a href="">Order</a></li>
+              <li><a href="">Customer</a></li>
+              <li><a href="">Report</a></li>
+              <li><a href="">Item</a></li>
+            </div>
+          </div>
+
+          <div class="searchbox">
+            <input
+              type="search"
+              name="searchItem"
+              id="searchItem"
+              placeholder="search category"
+            />
+            <button class="seartbtn" id="searchbtn">
+              <img src="../assest/img/searchIcon.png" alt="search" />
+            </button>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="bunGroup one1">Monthy</button>
+          <button class="bunGroup two">Annual</button>
+          <button class="bunGroup tre">Top User</button>
+          <button class="bunGroup fou">Expired</button>
+        </div>
+        <div class="addForm" id="addForm">
+          <div class="foritem">
+            <label for="item-name">Item Name:</label>
+            <input type="text" name="item-name" id="item-name" />
+          </div>
+          <div class="foritem">
+            <label for="item-size">Size:</label>
+            <input type="text" name="item-size" id="item-size" />
+          </div>
+          <div class="foritem">
+            <label for="item-price">Price:</label>
+            <input type="number" name="item-price" id="item-price" />
+          </div>
+          <div class="foritem">
+            <label for="item-code">ItemCode:</label>
+            <input type="text" name="item-code" id="item-code" />
+          </div>
+          <div class="foritem">
+            <label for="item-stock">Stoke:</label>
+            <input type="number" name="item-stock" id="item-stock" />
+          </div>
+          <div class="foritem">
+            <label for="item-discount">Discount:</label>
+            <input type="text" name="item-discount" id="item-discount" />
+          </div>
+          <div class="foritem">
+            <button class="bunGroup one1" id="addbtnOrder">Add</button>
+          </div>
+        </div>
+
+        <div class="addForm" id="addForm1">
+          <div class="searchbox">
+            <input
+              type="search"
+              name="searchItem"
+              id="searchItem1"
+              placeholder="search category"
+            />
+            <button class="seartbtn" id="searchbtn1">
+              <img src="../assest/img/searchIcon.png" alt="search" />
+            </button>
+          </div>
+          <div class="foritem">
+            <button class="bunGroup one1" id="addbtnOrder1">Update</button>
+            <button class="bunGroup two" id="addbtnOrder2">Delete</button>
+          </div>
+        </div>
+      </div>
+      <!-- Head -->
+
+      <!-- content -->
+      <div class="six content1">
+        <div class="cardmain" id="cardmain">
+          <div id="popularFoodItems"></div>
+          <div>
+            <h1>Monthly Sales</h1>
+            <table id="monthlyTable" border="1">
+              <thead>
+                <tr>
+                  <th>Item Code</th>
+                  <th>Item Name</th>
+                  <th>Customer ID</th>
+                  <th>Customer Name</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content -->
+
+    <script src="../assest/js/report.js"></script>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+body {
+  background-image: url("../img/Back.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 9em;
+  height: 100vh;
+}
+.sidebar1 {
+  grid-row: 1/5;
+  grid-column: 1/2;
+}
+.head1 {
+  grid-column: 2 / 5;
+  grid-row: 1/2;
+  background: transparent;
+  z-index: 4;
+}
+.content1 {
+  grid-column: 2 / 5;
+  grid-row: 2 / 5;
+  overflow-y: scroll;
+}
+.header {
+  display: flex;
+  height: 8rem;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-basis: 10rem;
+  flex-wrap: wrap;
+}
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.name img {
+  display: none;
+}
+.name h1 {
+  font-family: "Abril Fatface", serif;
+  color: maroon;
+}
+.searchbox {
+  height: 2em;
+  border-radius: 10rem;
+  border: gray solid 1px;
+  display: flex;
+  align-items: center;
+  border-radius: 10em;
+  padding: 10px;
+  background-color: white;
+}
+.searchbox input {
+  border: none;
+}
+.searchbox input[type="search"] {
+  font-family: "Abril Fatface", serif;
+  font-size: 1rem;
+}
+.seartbtn {
+  border-radius: 50%;
+  border: none;
+}
+.searchbox img {
+  width: 2rem;
+}
+.sidebarmain {
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 32em;
+  padding: 1.8em;
+  background-color: white;
+  opacity: 0.6;
+  margin-right: 2em;
+  position: sticky;
+  top: 2em;
+}
+.item {
+  width: 10rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: black;
+}
+.item:hover {
+  background: gray;
+  border: none;
+  border-radius: 1rem;
+}
+.item img {
+  width: 3rem;
+  height: 3rem;
+}
+.item h3 {
+  font-family: "Abril Fatface", serif;
+  color: white;
+}
+.cardmain {
+  display: flex;
+  padding: 3em;
+  background-color: transparent; /* Make it transparent initially */
+  justify-content: space-between;
+  position: relative;
+  overflow-y: auto; /* Enable horizontal scrolling */
+  flex-wrap: wrap; /* Prevent wrapping, make content scroll horizontally */
+  white-space: wrap; /* Ensure content stays in a single line */
+}
+
+.cardmain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  opacity: 0.6;
+  z-index: -1; /* Place the background behind the children */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  background-color: white;
+  position: relative;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-right: 1em; /* Add space between the cards */
+  opacity: 1;
+  flex-shrink: 0; /* Prevent shrinking when overflowing */
+  margin: 2em;
+}
+.card:hover {
+  box-shadow: 13px -8px 8px -4px rgba(224, 23, 23, 1);
+  -webkit-box-shadow: 13px -8px 8px -4px rgba(224, 23, 23, 1);
+  -moz-box-shadow: 13px -8px 8px -4px rgba(224, 23, 23, 1);
+}
+.pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5em;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: rgb(240, 7, 7);
+}
+.img {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-image: url("");
+  background-repeat: repeat;
+  background-size: cover;
+  position: absolute;
+  top: 2em;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+}
+.rate {
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  height: 5em;
+}
+.rate img {
+  width: 1.5em;
+  height: 1.5em;
+}
+.itemName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stock {
+  font-family: "Abril Fatface", serif;
+  color: maroon;
+}
+.details {
+  font-family: "Abril Fatface", serif;
+}
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price img {
+  width: 1em;
+  height: 1em;
+}
+.menubox {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  height: fit-content;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 4rem;
+  left: 5rem;
+  z-index: 1;
+  display: none;
+}
+.menubox li {
+  text-decoration: none;
+  list-style: none;
+  padding: 1rem;
+}
+.menubox a {
+  color: black;
+
+  text-decoration: none;
+}
+.menubox li:hover {
+  background: gray;
+  border: none;
+  border-radius: 2em;
+}
+.bunGroup {
+  color: white;
+  margin: 2em;
+  padding: 0.5em;
+  width: 5em;
+  border: none;
+  border-radius: 0.5em;
+}
+.one1 {
+  background-color: rgb(15, 209, 223);
+}
+.two {
+  background-color: brown;
+}
+.tre {
+  background-color: rgb(21, 224, 21);
+}
+.fou {
+  background-color: yellow;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+.addForm {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  z-index: -2;
+  border: solid black 1px;
+  width: 20rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(253, 253, 253);
+  margin: 1em;
+  margin-top: 0em;
+  display: none;
+}
+.foritem,
+.foritem select {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  color: black;
+}
+#monthlyTable {
+  margin-top: 5em;
+}
+
+@media screen and (max-width: 552px) {
+  .item {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .item h3 {
+    display: none;
+  }
+  .cardmain {
+    padding: 0em;
+    flex-basis: 2em;
+    flex-shrink: 4;
+  }
+  .content1 {
+    grid-column: 1 / 5;
+    grid-row: 2 / 5;
+    overflow-y: scroll;
+  }
+  .head1 {
+    grid-column: 1 / 5;
+    grid-row: 1/2;
+    background: transparent;
+  }
+  .sidebar1 {
+    grid-row: 1/5;
+    grid-column: 1/2;
+    display: none;
+  }
+  .name img {
+    display: block;
+  }
+  .menubox {
+    display: none;
+  }
+}
+
+.one {
+}
+.two {
+  background-color: blue;
+}
+.tree {
+  background-color: yellow;
+}
+.four {
+}
+.five {
+  background-color: aqua;
+}
+.six {
+}
+.seven {
+  background-color: white;
+}
+.eight {
+  background-color: blueviolet;
+}
+.nine {
+  background-color: cadetblue;
+}
+
+.cardreport {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  display: inline-block;
+}
+.piccart img {
+  width: 100%;
+  height: auto;
+}
+.data .price {
+  font-size: 18px;
+  font-weight: bold;
+}
