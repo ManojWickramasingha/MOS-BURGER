@@ -623,22 +623,22 @@ let items = document.getElementsByClassName("item");
 console.log(items);
 
 items[0].addEventListener("click", () => {
-  location.href = "../../index.html";
+  location.href = "index.html";
 });
 
 items[1].addEventListener("click", () => {
   console.log("in order");
-  window.location.href = "../../pages/order.html";
+  window.location.href = "pages/order.html";
 });
 
 items[2].addEventListener("click", () => {
-  location.href = "../../pages/customer.html";
+  location.href = "pages/customer.html";
 });
 
 items[3].addEventListener("click", () => {
-  location.href = "../../pages/report.html";
+  location.href = "pages/report.html";
 });
 
 items[4].addEventListener("click", () => {
-  location.href = "../../pages/item.html";
+  location.href = "pages/item.html";
 });
